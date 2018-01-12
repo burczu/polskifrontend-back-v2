@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import app from '../main';
 
 export default function adminAuth(req, res, next) {
-  // check header or url parameters or post parameters for token
+  // check header parameter for token
   const token = req.headers['X-Access-Token'];
 
   // decode token
