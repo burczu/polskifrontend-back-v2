@@ -31,6 +31,14 @@ const config = {
       host: '127.0.0.1',
       database: 'local_database_name'
     }
+  },
+  deploy: {
+    remote: {
+      name: 'heroku project name',
+      url: 'heroku git repository url address',
+      branch: 'master',
+      website: 'heroku website url address'
+    }
   }
 };
 export default Object.assign(common, config[env]);

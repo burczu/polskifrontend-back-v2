@@ -3,14 +3,10 @@ import npmRunScript from 'npm-run-script';
 import fetch from 'node-fetch';
 import { spawn } from './lib/cp';
 import { makeDir } from './lib/fs';
+import config from './src/config';
 
 // Heroku
-const remote = {
-  name: 'heroku',
-  url: 'https://git.heroku.com/polskifrontend-back.git',
-  branch: 'master',
-  website: 'https://polskifrontend-back.herokuapp.com/',
-};
+const { remote } = config.deploy;
 
 const options = {
   cwd: path.resolve(__dirname, './dist'),
